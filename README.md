@@ -1,4 +1,4 @@
-# Web Dentino
+# Web VII Full Day Gestión de TI
 
 Repositorio de código de maquetado del mockup del sitio web de VII Full Day Gestión de TI
 
