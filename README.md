@@ -1,6 +1,6 @@
 # Web Dentino
 
-Repositorio de código de maquetado del mockup del sitio web de dentino
+Repositorio de código de maquetado del mockup del sitio web de VII Full Day Gestión de TI
 
 ## Uso
 
@@ -27,7 +27,7 @@ npm install
 ```
 
 ```bash
-npm run dev
+npm run start:dev
 ```
 
 El servidor utiliza por defecto el puerto 3000
