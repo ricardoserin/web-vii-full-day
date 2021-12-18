@@ -2,6 +2,8 @@ import initContactForm from "./modules/contactForm";
 import initToggleButton from "./modules/toggleMenu";
 import getAllSections from './modules/intersectionChanger';
 import Slider from "./modules/Slider";
+import time from "./modules/timedown"
+
 const stories = [
   {
     message: 'Frase 1 correspondiente del ponente respecto al tema que va a tratar.',
