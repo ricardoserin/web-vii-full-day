@@ -1,21 +1,40 @@
 import initContactForm from "./modules/contactForm";
 import initToggleButton from "./modules/toggleMenu";
-import getAllSections from './modules/intersectionChanger'
+import getAllSections from './modules/intersectionChanger';
 import Slider from "./modules/Slider";
-import time from "./modules/timedown"
-
-const stories = [{
-        message: 'Feliz con la atención personalizada y extremos cuidados en mi tratamiento gracias al uso de los protocolos de bioseguridad en cada intervención clínica.',
-        author: 'Sebastian Martinez'
-    },
-    {
-        message: 'Estoy muy satisfecha con el diagnóstico y tratamiento dental que llevo en Dentino, he vuelto a sonreír con mucha confianza.',
-        author: 'Eliana Caro'
-    },
-    {
-        message: 'En Dentino encontré diversos profesionales especializados en cada área, mi problema dental me generaba muchas complicaciones pero los doctores supieron cómo ayudarme y estoy muy feliz.',
-        author: 'Sergio Mendez'
-    },
+const stories = [
+  {
+    message: 'Frase 1 correspondiente del ponente respecto al tema que va a tratar.',
+    author: 'Ponente 1'
+  },
+  {
+    message: 'Frase 2 correspondiente del ponente respecto al tema que va a tratar.',
+    author: 'Ponente 2'
+  },
+  {
+    message: 'Frase 3 correspondiente del ponente respecto al tema que va a tratar.',
+    author: 'Ponente 3'
+  },
+  {
+    message: 'Frase 4 correspondiente del ponente respecto al tema que va a tratar.',
+    author: 'Ponente 4'
+  },
+  // {
+  //   message: 'Frase 5 correspondiente del ponente respecto al tema que va a tratar.',
+  //   author: 'Ponente 5'
+  // },
+  // {
+  //   message: 'Frase 6 correspondiente del ponente respecto al tema que va a tratar.',
+  //   author: 'Ponente 6'
+  // },
+  // {
+  //   message: 'Frase 7 correspondiente del ponente respecto al tema que va a tratar.',
+  //   author: 'Ponente 7'
+  // },
+  // {
+  //   message: 'Frase 8 correspondiente del ponente respecto al tema que va a tratar.',
+  //   author: 'Ponente 8'
+  // },
 ];
 
 document.addEventListener('readystatechange', () => {
