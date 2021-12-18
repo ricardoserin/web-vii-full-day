@@ -2,13 +2,13 @@ import firebase from 'firebase';
 import 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyArvXAou1wdX2sQNQLqhZD9SBWiUxjbdgA",
-  authDomain: "dentino-web.firebaseapp.com",
-  projectId: "dentino-web",
-  storageBucket: "dentino-web.appspot.com",
-  messagingSenderId: "200524047422",
-  appId: "1:200524047422:web:1aa6f9958a256203019d6f",
-  measurementId: "G-X177X5LRXL"
+  apiKey: "AIzaSyCd8SMW32bi7VSaFYfGeB6YtbvbAcvCyoE",
+  authDomain: "vii-full-day-gestion-ti.firebaseapp.com",
+  projectId: "vii-full-day-gestion-ti",
+  storageBucket: "vii-full-day-gestion-ti.appspot.com",
+  messagingSenderId: "76444598937",
+  appId: "1:76444598937:web:e331bdfcf9c365a68d6e08",
+  measurementId: "${config.measurementId}"
 };
 // Initialize Firebase
 if (firebase.apps.length === 0) {
