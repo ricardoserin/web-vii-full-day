@@ -1,0 +1,71 @@
+/*.simply-section {
+    background: #fff;
+    //width: 180px;
+    //height: 180px;
+    //margin: 0 20px;
+    //color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border: black 10px;
+}
+
+.simply-amount {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.simply-word {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+#cuenta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}*/
+
+#cuenta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    @media screen and (max-width: $breakpoint-laptop) {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.simply-section {
+    background: #fff;
+    width: 180px;
+    height: 180px;
+    margin: 0 20px;
+    border-radius: 5px;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    .simply-amount,
+    .simply-word {
+        font-weight: 300;
+        font-size: 30px;
+        display: block;
+        text-align: center;
+        @media screen and (max-width: $breakpoint-laptop) {
+            font-weight: 300;
+            font-size: 15px;
+        }
+    }
+    @media screen and (max-width: $breakpoint-laptop) {
+        width: 80px;
+        height: 80px;
+        margin: 0 5px;
+    }
+}
