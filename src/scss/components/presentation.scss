@@ -1,6 +1,6 @@
 .presentation {
     position: relative;
-    background-color: $cl-skyblue;
+    background-color: $cl-secondary;
     color: #ffffff;
     &__call-to-action {
         display: flex;
@@ -54,16 +54,17 @@
     }
     &__image {
         position: absolute;
-        bottom: 0;
-        margin: 2rem auto;
-        margin-left: -2rem;
-        margin-bottom: 0;
+        // bottom: 0;
+        // margin: 2rem auto;
+        // margin-left: -2rem;
+        // margin-bottom: 0;
         width: 30rem;
         min-height: 34rem;
-        padding: 2rem;
-        padding-bottom: 0;
+        // padding: 2rem;
+        // padding-bottom: 0;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         object-fit: cover;
         object-position: center;

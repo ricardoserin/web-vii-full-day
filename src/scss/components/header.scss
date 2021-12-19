@@ -71,7 +71,7 @@
     &__logo {
         margin-left: 2em;
         width: 20rem;
-        height: calc(#{$headerHeight} * 0.55);
+        height: calc(#{$headerHeight} * 0.75);
         position: relative;
         display: block;
         & a:focus {
@@ -186,14 +186,15 @@
         position: relative;
         padding: 1rem;
         font-size: 1.1rem;
+        color: $cl-secondary;
         @media screen and (max-width: $breakpoint-tablet) {
             font-size: 1.5rem;
         }
         &--active a {
-            color: $cl-skyblue;
+            color: $cl-primary;
         }
         & a:hover {
-            color: $cl-skyblue;
+            color: $cl-secondary-alt;
         }
         & button {
             display: inline-block;
