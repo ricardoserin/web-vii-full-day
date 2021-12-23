@@ -1,9 +1,11 @@
+$assetPath :"/assets/img";
 .presentation {
     position: relative;
-    background-image: url("https://www.ngenespanol.com/wp-content/uploads/2018/08/La-primera-imagen-de-la-historia.jpg");
+    //background-image: linear-gradient(90deg, #000, rgba(253, 29, 29, 0) 50%, rgba(252, 176, 69, 0)), url("https://www.ngenespanol.com/wp-content/uploads/2018/08/La-primera-imagen-de-la-historia.jpg");
+    background-image: linear-gradient(90deg, #000, rgba(253, 29, 29, 0) 50%, rgba(252, 176, 69, 0)), url("https://drive.google.com/uc?id=1S985G-vJkstxSQvcDbAYdxJfHJBmPw8k");
     background-size: cover;
     color: #ffffff;
-    background: linear-gradient(90deg,#000,rgba(253,29,29,0) 50%,rgba(252,176,69,0));
+    //background: linear-gradient(90deg,#000,rgba(253,29,29,0) 50%,rgba(252,176,69,0));
     &__call-to-action {
         display: flex;
         flex-direction: column;
