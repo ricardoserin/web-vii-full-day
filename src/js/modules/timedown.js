@@ -39,12 +39,12 @@ import 'simplycountdown.js/dev/simplyCountdown'
 simplyCountdown('#cuenta', {
     year: 2022, // required
     month: 1, // required
-    day: 12, // required
+    day: 15, // required
     hours: 9, // Default is 0 [0-23] integer
     minutes: 0, // Default is 0 [0-59] integer
     seconds: 0, // Default is 0 [0-59] integer
     words: { //words displayed into the countdown
-        days: { singular: 'Dia', plural: 'Dias' },
+        days: { singular: 'Día', plural: 'Días' },
         hours: { singular: 'Hora', plural: 'Horas' },
         minutes: { singular: 'Minuto', plural: 'Minutos' },
         seconds: { singular: 'Segundo', plural: 'Segundos' }
@@ -52,9 +52,15 @@ simplyCountdown('#cuenta', {
     plural: true, //use plurals
     onEnd: function() {
         // your code
+        document.getElementById("elimina1").remove();
+        document.getElementById("elimina2").remove();
+        const div = document.getElementById('cuenta');
+        div.innerHTML = '<strong> <h1  class="presentation__message">El evento ya inició</h1></strong>'; // Interpreta el HTML
+        div.innerHTML;
+        div.textContent;
         return;
     },
-    countUp: true,
+    //countUp: true,
 });
 const time = () => { simplyCountdown }
 export default time

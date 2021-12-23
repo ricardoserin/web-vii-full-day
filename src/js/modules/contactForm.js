@@ -1,11 +1,16 @@
 import { firestore, toFirebaseTimestamp } from "./firebase";
 
 const submitForm = async (values) => {
-  const { email, message, names, phone } = values;
+  const { email, surnames, names, phone } = values;
   const contactDbRef = firestore.collection('consultasRecibidas');
   const consultation = contactDbRef.doc();
   await consultation.set({
-    email, message, names, phone, fecha: toFirebaseTimestamp(new Date())
+    email, 
+    surnames, 
+    names, 
+    phone, 
+    fecha: toFirebaseTimestamp(new Date()),
+    "pagoValidado": false
   });
 }
 
