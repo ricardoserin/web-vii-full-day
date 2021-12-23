@@ -1,7 +1,9 @@
 .presentation {
     position: relative;
-    background-color: $cl-skyblue;
+    background-image: url("https://www.ngenespanol.com/wp-content/uploads/2018/08/La-primera-imagen-de-la-historia.jpg");
+    background-size: cover;
     color: #ffffff;
+    background: linear-gradient(90deg,#000,rgba(253,29,29,0) 50%,rgba(252,176,69,0));
     &__call-to-action {
         display: flex;
         flex-direction: column;
@@ -54,16 +56,17 @@
     }
     &__image {
         position: absolute;
-        bottom: 0;
-        margin: 2rem auto;
-        margin-left: -2rem;
-        margin-bottom: 0;
+        // bottom: 0;
+        // margin: 2rem auto;
+        // margin-left: -2rem;
+        // margin-bottom: 0;
         width: 30rem;
         min-height: 34rem;
-        padding: 2rem;
-        padding-bottom: 0;
+        // padding: 2rem;
+        // padding-bottom: 0;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         object-fit: cover;
         object-position: center;
