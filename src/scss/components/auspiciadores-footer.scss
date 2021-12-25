@@ -1,8 +1,8 @@
-$color-background: #2E4370;
-
+// COLORS
+@import "../common/colors.scss";
 
 #auspiciadores {
-    background-color: $color-background;
+    background-color: $cl-gray;
     padding-top: 1rem;
     padding-bottom: 3rem;
 
@@ -16,6 +16,7 @@ $color-background: #2E4370;
 
     .carousel {
         max-height: 200px;
+        padding: 10rem 0rem;
     
         .carousel-item {
             display: flex;
@@ -23,7 +24,7 @@ $color-background: #2E4370;
             justify-content: center;
             align-items: center;
             user-select: none;
-            width: 200px;
+            width: 310px;
             height: 200px;
     
             img {
@@ -34,8 +35,8 @@ $color-background: #2E4370;
                 top: 0;
                 left: 0;
                 z-index: -1;
-                border-radius: 1.5rem;
-                border: #2E4370 1px solid;
+                // border-radius: 1.5rem;
+                // border: #2E4370 1px solid;
             }
         }
     }
@@ -43,7 +44,7 @@ $color-background: #2E4370;
 
 #footer {
     padding: 0 4rem;
-    background-color: $color-background;
+    background-color: $cl-secondary-alt;
     color: white;
 
     p {
@@ -52,7 +53,7 @@ $color-background: #2E4370;
 
     .grid {
         display: grid;
-        gap: 1rem;
+        gap: 4rem;
     }
 
     .items-enlace {
@@ -69,7 +70,15 @@ $color-background: #2E4370;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
+    .descripcion {
+        letter-spacing: 0.05em;
+        line-height: 1.25;
+        text-align: justify;
+    }
+
     .nav-links {
+        display: flex;
+        align-items: center;
         &:hover {
             color: #869DCE;
         }
@@ -94,16 +103,24 @@ $color-background: #2E4370;
 
 @media (min-width: 640px) {
     .grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    // .carousel .carousel-item { width: 100px; }
+    // .carousel .carousel-item img { width: 160px; }
 }
 
 @media (min-width: 768px) {
     .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    // .carousel .carousel-item { width: 300px; }
+    // .carousel .carousel-item img { width: 200px; }
 }
 
 @media (min-width: 1024px) {
     .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    // .carousel .carousel-item { width: 380px; }
+    // .carousel .carousel-item img { width: 380px; }
 }
 
 @media (min-width: 1280px) {
     .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    // .carousel .carousel-item { width: 380px; }
+    // .carousel .carousel-item img { width: 380px; }
 }
