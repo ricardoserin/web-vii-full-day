@@ -36,6 +36,7 @@ const countdown = (deadline, elem, finalMessage) => {
 const time = () => { countdown('Dec 3 2021 15:26:40 UTC-5', 'clock', '<a href="#inscripcion">El evento ya empezó, Inscribete!</a>'); }
 export default time*/
 import 'simplycountdown.js/dev/simplyCountdown'
+
 simplyCountdown('#cuenta', {
     year: 2022, // required
     month: 1, // required
