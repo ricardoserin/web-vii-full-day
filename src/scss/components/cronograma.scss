@@ -199,6 +199,9 @@
       border: 2px solid $cl-blue;
       padding: .8rem .9rem;
       border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &-container {
         background-color: $cl-white;
       }

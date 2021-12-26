@@ -4,12 +4,6 @@ class Slider {
     this.previousSlider = 0;
     this.activeSlider = 1;
     this.nextSlider = 2;
-    // this.nextSlider2 = 3;
-    // this.nextSlider3 =1;
-    // this.nextSlider4 = 2;
-    // this.nextSlider5 = 0;
-    // this.nextSlider6 = 1;
-    // this.nextSlider7 = 2;
   }
 
   static #removeClasslist(element) {
@@ -57,7 +51,7 @@ class Slider {
       this.moveSlider();
       this.#updateElementClasses();
       this.#updateControlStyles();
-    }, 5000)
+    }, 500000)
   }
 
   #resetInterval() {
@@ -74,16 +68,11 @@ class Slider {
     })
   }
 
+
   #cleanSliderElements() {
     Slider.#removeClasslist(this.sliderItems[this.activeSlider]); 
     Slider.#removeClasslist(this.sliderItems[this.previousSlider]); 
-    Slider.#removeClasslist(this.sliderItems[this.nextSlider]);
-    // Slider.#removeClasslist(this.sliderItems[this.nextSlider2]);
-    // Slider.#removeClasslist(this.sliderItems[this.nextSlider3]); 
-    // Slider.#removeClasslist(this.sliderItems[this.nextSlider4]); 
-    // Slider.#removeClasslist(this.sliderItems[this.nextSlider5]); 
-    // Slider.#removeClasslist(this.sliderItems[this.nextSlider6]);
-    // Slider.#removeClasslist(this.sliderItems[this.nextSlider7]);
+    Slider.#removeClasslist(this.sliderItems[this.nextSlider]); 
   }
 
   #updateElementClasses() {
@@ -93,18 +82,6 @@ class Slider {
     this.sliderItems[this.previousSlider].classList.add('customer-stories__item--left');
     this.sliderItems[this.nextSlider].classList.add('customer-stories__item');
     this.sliderItems[this.nextSlider].classList.add('customer-stories__item--right');
-    // this.sliderItems[this.nextSlider2].classList.add('customer-stories__item');
-    // this.sliderItems[this.nextSlider2].classList.add('customer-stories__item--right');
-    // this.sliderItems[this.nextSlider3].classList.add('customer-stories__item');
-    // this.sliderItems[this.nextSlider3].classList.add('customer-stories__item--left');
-    // this.sliderItems[this.nextSlider4].classList.add('customer-stories__item');
-    // this.sliderItems[this.nextSlider4].classList.add('customer-stories__item--left');
-    // this.sliderItems[this.nextSlider5].classList.add('customer-stories__item');
-    // this.sliderItems[this.nextSlider5].classList.add('customer-stories__item--left');
-    // this.sliderItems[this.nextSlider6].classList.add('customer-stories__item');
-    // this.sliderItems[this.nextSlider6].classList.add('customer-stories__item--left');
-    // this.sliderItems[this.nextSlider7].classList.add('customer-stories__item');
-    // this.sliderItems[this.nextSlider7].classList.add('customer-stories__item--left');
   }
   
   initSlider() {
@@ -130,42 +107,18 @@ class Slider {
     this.activeSlider++;
     this.previousSlider++;
     this.nextSlider++;
-    // this.nextSlider2++;
-    // this.nextSlider3++;
-    // this.nextSlider4++;
-    // this.nextSlider5++;
-    // this.nextSlider6++;
-    // this.nextSlider7++;
     if (this.activeSlider >= this.sliderItems.length) this.activeSlider = 0;
     if (this.previousSlider >= this.sliderItems.length) this.previousSlider = 0;
     if (this.nextSlider >= this.sliderItems.length) this.nextSlider = 0;
-    // if (this.nextSlider2 >= this.sliderItems.length) this.nextSlider2 = 0;
-    // if (this.nextSlider3 >= this.sliderItems.length) this.nextSlider3 = 0;
-    // if (this.nextSlider4 >= this.sliderItems.length) this.nextSlider4 = 0;
-    // if (this.nextSlider5 >= this.sliderItems.length) this.nextSlider5 = 0;
-    // if (this.nextSlider6 >= this.sliderItems.length) this.nextSlider6 = 0;
-    // if (this.nextSlider7 >= this.sliderItems.length) this.nextSlider7 = 0;
   }
 
   moveSliderTo(num) {
     this.activeSlider = num;
     this.previousSlider = num - 1;
     this.nextSlider = num + 1;
-    // this.nextSlider2 = num -1;
-    // this.nextSlider3 = num +3;
-    // this.nextSlider4 = num +4;
-    // this.nextSlider5 = num +5;
-    // this.nextSlider6 = num +6;
-    // this.nextSlider7 = num +7;
     if (this.activeSlider >= this.sliderItems.length) this.activeSlider = 0;
     if (this.previousSlider < 0) this.previousSlider = 2;
     if (this.nextSlider >= this.sliderItems.length) this.nextSlider = 0;
-    // if (this.nextSlider2 >= this.sliderItems.length) this.nextSlider2 = 0;
-    // if (this.nextSlider3 >= this.sliderItems.length) this.nextSlider3 = 0;
-    // if (this.nextSlider4 >= this.sliderItems.length) this.nextSlider4 = 0;
-    // if (this.nextSlider5 >= this.sliderItems.length) this.nextSlider5 = 0;
-    // if (this.nextSlider6 >= this.sliderItems.length) this.nextSlider6 = 0;
-    // if (this.nextSlider7 >= this.sliderItems.length) this.nextSlider7 = 0;
   }
 }
 

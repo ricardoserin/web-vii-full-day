@@ -5,7 +5,7 @@
   text-decoration: none;
   font-size: 1.5rem;
   color: #ffffff;
-  background-color: $cl-skyblue;
+  background-color: $cl-primary;
   margin: 0;
   padding: .8rem 1.5rem;
   border-radius: 9px;
@@ -13,6 +13,6 @@
   padding: .8rem 1.5rem;
   cursor: pointer;
   &:hover {
-    background-color: $cl-purple;
+    background-color: $cl-primary-alt;
   }
 }

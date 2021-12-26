@@ -32,16 +32,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $cl-white;
+  background-color: $cl-gray;
   color: $cl-blue;
-  min-height: auto;
+  // height: calc(100vh);
+  // min-height: auto;
   &__title {
     border: 2px solid $cl-blue;
     padding: .8rem .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 30px;
-    background-color: $cl-white;
+    background-color: $cl-gray;
     &-container {
-      background-color: $cl-white;
+      background-color: $cl-gray;
     }
   }
   &__items {

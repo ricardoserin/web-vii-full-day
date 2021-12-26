@@ -43,10 +43,10 @@
 }
 
 .simply-section {
-    background: rgba($color: #FFFFFF, $alpha: .45);
-    width: 10rem;
-    height: 5rem;
-    margin: 0 .5rem;
+    background: rgba($color: #000000, $alpha: .15);
+    width: 15rem;
+    height: 8rem;
+    margin: 0 1rem;
     border-radius: 5px;
     display: flex;
     color: $cl-white;
@@ -55,7 +55,7 @@
     .simply-amount,
     .simply-word {
         font-weight: 300;
-        font-size: 1.5rem;
+        font-size: 2rem;
         display: block;
         text-align: center;
         @media screen and (max-width: $breakpoint-laptop) {

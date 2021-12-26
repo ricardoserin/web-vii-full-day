@@ -45,10 +45,10 @@ simplyCountdown('#cuenta', {
     minutes: 0, // Default is 0 [0-59] integer
     seconds: 0, // Default is 0 [0-59] integer
     words: { //words displayed into the countdown
-        days: { singular: 'Día', plural: 'Días' },
-        hours: { singular: 'Hora', plural: 'Horas' },
-        minutes: { singular: 'Minuto', plural: 'Minutos' },
-        seconds: { singular: 'Segundo', plural: 'Segundos' }
+        days: { singular: 'día', plural: 'días' },
+        hours: { singular: 'hora', plural: 'horas' },
+        minutes: { singular: 'minuto', plural: 'minutos' },
+        seconds: { singular: 'segundo', plural: 'segundos' }
     },
     plural: true, //use plurals
     onEnd: function() {
