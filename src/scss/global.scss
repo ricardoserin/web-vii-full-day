@@ -78,7 +78,7 @@ img {
 
 .flotantButton{
   position: fixed;
-  bottom: 1rem;
+  bottom: 2rem;
   right: 1rem;
   z-index: 99;
   min-width: 3.5rem;
@@ -88,7 +88,7 @@ img {
   height: 3.5rem;
   width: 3.5rem;
   &-2{
-    bottom: 5.5rem;
+    bottom: 6.5rem;
   }
   
   &__img {

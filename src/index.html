@@ -78,7 +78,7 @@
                     <a href="#precios">Precios</a>
                 </li>
                 <li id="linkinscripcion" class="navigation__item">
-                    <a href="#inscripcion">Inscribete!</a>
+                    <a href="#contacto">Inscribete!</a>
                 </li>
                 <li id="linkauspiciadores" class="navigation__item">
                     <a href="#inscripcion">Auspiciadores</a>
@@ -179,7 +179,7 @@
                                     <div class="ponente__body">
                                         <div class="ponente__text">
                                             <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quo doloremque amet corporis et illum. Quo fuga incidunt atque, id explicabo ipsam voluptates rem, minima deserunt esse a ratione sapiente.
+                                                El objetivo del webinar es dar a conocer la experiencia del proceso de transformación digital en el Organismo Supervisor de la Inversión en Energía y Minería - Osinergmin, considerando cuatro pilares: personas, procesos, tecnología e innovación, los cuales forman parte de su estrategia de Gobierno Digital.
                                             </p>
                                         </div>
                                         <div class="ponente__name">
@@ -205,7 +205,7 @@
                 <div class="title-container__bar">
                 </div>
                 <div class="title-container__start"></div>
-                <h2 class="title schedule__title">CRONOGRAMA</h2>
+                <h2 class="title schedule__title">Cronograma</h2>
             </div>
             <div class="linea-tiempo">
                 <div class="momento">
@@ -474,12 +474,13 @@
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
+                
                 const elementosCarousel = document.querySelectorAll('.carousel');
                 M.Carousel.init(elementosCarousel, {
-                    duration: 1500,
+                    duration: 300,
                     dist: -80,
-                    shift: 5,
-                    padding: 5,
+                    shift: 32,
+                    padding: 32,
                     numVisible: 5,
                     indicators: false,
                     noWrap: false,
@@ -497,11 +498,12 @@
                         slideShadows: true,
                     },
                     loop: true,
+                    autoplay: {
+                        delay: 5000,
+                    },
                     });
             });
         </script>
     </main>
-
 </body>
-
 </html>

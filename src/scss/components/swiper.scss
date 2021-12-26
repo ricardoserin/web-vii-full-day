@@ -55,7 +55,7 @@
     top: 3rem;
     & > img {
       border-radius: 50%;
-      border: 3px dashed $cl-primary;
+      border: 3px dashed $cl-secondary;
       object-fit: cover;
       min-width: 10rem;
       max-width: 10rem;
@@ -69,7 +69,7 @@
     & >h2 {
       margin: 0;
       font-size: 1.5rem;
-      color: $cl-primary;
+      color: $cl-secondary;
     }
   }
   &__job {
@@ -84,6 +84,7 @@
     & > p {
       color: #000;
       font-size: 1.3rem;
+      text-align: justify;
     }
   }
 }
