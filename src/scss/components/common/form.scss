@@ -30,9 +30,15 @@
   &__button {
     width: 100%;
     min-width: 10rem;
-    background-color: $cl-primary;
+    background-color: $cl-secondary;
     font-size: 1rem;
     border-radius: 30px;
     font-weight: bold;
   }
+}
+
+.a-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

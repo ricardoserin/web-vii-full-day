@@ -20,6 +20,18 @@
 }
 
 .form__checkbox[type="checkbox"].filled-in:checked+span:not(.lever):after {
-  border: 2px solid $cl-primary;
-  background-color: $cl-primary-alt;
+  border: 2px solid $cl-secondary;
+  background-color: $cl-secondary;
+}
+
+.active {
+  color: $cl-secondary !important;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly])
+ {
+  border-bottom: 1px solid $cl-secondary !important;
+  box-shadow: 0 1px 0 0 $cl-secondary !important;
 }
