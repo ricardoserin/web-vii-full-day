@@ -4,7 +4,7 @@ import { db } from "./firebase";
 const submitForm = async (values) => {
   console.log(values);
   const { email, names, surnames, phone, certificate, organisation } = values;
-  const newParticipantRef = doc(collection(db, 'participants-test'));
+  const newParticipantRef = doc(collection(db, 'consultasRecibidas'));
   const data = {
     "surnames": surnames.toUpperCase(),
     "names": names.toUpperCase(),
