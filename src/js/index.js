@@ -50,8 +50,8 @@ document.addEventListener('readystatechange', () => {
         initToggleButton();
         getAllSections();
         time();
-        const slider = new Slider(stories);
-        Swiper.use([Navigation, Pagination]);
+        // const slider = new Slider(stories);
+        // Swiper.use([Navigation, Pagination]);
         // const swiper = new Swiper('.swiper-container', {
         //   effect: 'coverflow',
         //   grabCursor: true,
@@ -68,6 +68,6 @@ document.addEventListener('readystatechange', () => {
         //     el: '.swiper-pagination',
         //   },
         // });
-        slider.initSlider();
+        // slider.initSlider();
     }
 })
