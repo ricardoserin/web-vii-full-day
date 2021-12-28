@@ -243,6 +243,11 @@
           padding-left: 2rem;
           text-align: left;
           justify-content: flex-start;
+          @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 1rem;
+            flex-direction: column;
+            justify-content: flex-end;
+          }
         }
         & > .moment__details-bottom {
           padding-right: 0;
@@ -275,6 +280,10 @@
         font-weight: bold;
         width: fit-content;
         font-size: 1.25rem;
+        @media screen and (max-width: $breakpoint-tablet) {
+          font-size: 1rem;
+          flex-direction: column;
+        }
         & > span {
           color: $cl-secondary-focus;
           margin: 0 .5rem;
@@ -291,12 +300,16 @@
         & > span {
           font-weight: bold;
           margin: 0;
-          font-size: 1rem;
+          @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 0.75rem;
+          }
         }
         & > p {
           color: #212121;
           margin: 0;
-          font-size: 1rem;
+          @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 0.75rem;
+          }
         }
       }
     }
