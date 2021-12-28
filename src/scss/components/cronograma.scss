@@ -116,7 +116,7 @@
     content: '';
     position: absolute;
     width: 3px;
-    background-color: #000;
+    background-color: $cl-secondary;
     left: 50%;
     height: 100%;
     border-radius: 10px;
@@ -124,8 +124,11 @@
   
   .momento {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 45%;
     box-sizing: border-box;
+    margin-top: 2rem;
   }
   
   .momento:nth-child(even) {
@@ -139,7 +142,8 @@
     right: calc(-11.11% - 11.5px);
     height: 20px;
     width: 20px;
-    background-color: #000;
+    background-color: $cl-white;
+    border: 3px solid $cl-secondary;
     border-radius: 50%;
   }
   
@@ -194,15 +198,155 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    & > h4 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
   }
   //TÍTULO DE EVENTO
   .evento{
     margin-left: 5px;
     color: green;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 20px;
+    display: flex;
+    align-items: center;
   }
   .autorPonencia{
     font-size: 12px;
     font-weight: bold;
+  }
+
+  .timeline {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 98%;
+    }
+  }
+
+  .moment {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    &--reverse {
+      flex-direction: row-reverse;
+      & > .moment__details {
+        border-right: none;
+        align-items: flex-start;
+        & > .moment__details-top {
+          padding-right: 0;
+          padding-left: 2rem;
+          text-align: left;
+          justify-content: flex-start;
+        }
+        & > .moment__details-bottom {
+          padding-right: 0;
+          padding-left: 2rem;
+          text-align: left;
+          
+        }
+      }
+      & > .moment__picture-container {
+        border-right: 3px solid $cl-secondary;
+        // padding-right: 2rem;
+        justify-content: flex-end; 
+      }
+    }
+    
+    &__details {
+      width: 50%;
+      border-right: 3px solid $cl-secondary;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      &-top {
+        border-bottom: 2px solid $cl-secondary-focus;
+        padding-right: 2rem;
+        text-align: right;
+        height: 3.5rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-weight: bold;
+        width: fit-content;
+        & > span {
+          color: $cl-secondary-focus;
+          margin: 0 .5rem;
+          font-weight: 500;
+        }
+      }
+      &-bottom {
+        padding-right: 2rem;
+        text-align: right;
+        height: 3.5rem;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        & > span {
+          font-weight: bold;
+          margin: 0;
+          font-size: 0.75rem;
+        }
+        & > p {
+          color: #212121;
+          margin: 0;
+          font-size: 0.75rem;
+        }
+      }
+    }
+    &__picture {
+      position: relative;
+      min-width: 5rem;
+      min-height: 5rem;
+      width: 5rem;
+      height: auto;
+      display: flex;
+      align-items: center;
+      // top: 3rem;
+      & > img {
+        border-radius: 50%;
+        border: 3px dashed $cl-secondary-focus;
+        object-fit: cover;
+        min-width: 5rem;
+        max-width: 5rem;
+        min-height: 5rem;
+        max-height: 5rem;
+        height: 5rem;
+        width: 5rem;
+      }
+    }
+    &__picture-container {
+      width: 50%;
+      // padding: 0 0.75rem;
+      height: 7rem;
+      padding: 1rem 1rem;
+      display: flex;
+      justify-content: flex-start;      
+    }
+
+    &__line {
+      width: 0.75rem;
+      height: -webkit-fill-available;
+      &-container {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: -webkit-fill-available;
+        left: calc(50% - 0.93rem);
+      }
+      &-icon {
+        font-size: 1.5rem;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid white;
+        color: $cl-secondary-focus;
+      }
+    }
+
+    
   }
