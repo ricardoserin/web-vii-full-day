@@ -102,122 +102,7 @@
     }
   }
 
-  //LINEA DE TIEMPO
-  .linea-tiempo {
-    margin-top: 6px;
-    position: relative;
-    width: 500px;
-    max-width: 95vw;
-    height: 100%;
-    font-family: Arial;
-  }
-  
-  .linea-tiempo::before {
-    content: '';
-    position: absolute;
-    width: 3px;
-    background-color: $cl-secondary;
-    left: 50%;
-    height: 100%;
-    border-radius: 10px;
-  }
-  
-  .momento {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    box-sizing: border-box;
-    margin-top: 2rem;
-  }
-  
-  .momento:nth-child(even) {
-    left: 55%;
-  }
-  
-  .momento::after {
-    content: '';
-    position: absolute;
-    top: calc(50% + 10px);
-    right: calc(-11.11% - 11.5px);
-    height: 20px;
-    width: 20px;
-    background-color: $cl-white;
-    border: 3px solid $cl-secondary;
-    border-radius: 50%;
-  }
-  
-  .momento:nth-child(even)::after {
-    left: calc(-11.11% - 8.5px);
-  }
-   //PARA TEXTO DE LOS DE LA IZQUIERDA
-  .momento .descripcion{   
-    text-align: end;
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px;
-    line-height: 22px;
-    font-size: 14px;
-    color: black;
-  }
-  //PARA FLECHITA DE IZQUIERDA
-  .momento .descripcion::after {
-    content: '';
-    position: absolute;
-    right: -10px;
-    top: calc(50% + 10px);
-    height: 0;
-    width: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 12px solid rgb(124, 0, 0);
-  }
-  
-  //PARA TEXTO DE LOS DE LA DERECHA
-  .momento:nth-child(even) .descripcion {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    text-align: start;
-  }
-  //PARA FLECHITA DERECHA
-  .momento:nth-child(even) .descripcion::after{
-    left: -10px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 12px solid #3393FE;
-    border-left: none;
-  }
-  //BOTON
-  .divBotón{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  }
-  .títuloPonencia{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    & > h4 {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-  }
-  //TÍTULO DE EVENTO
-  .evento{
-    margin-left: 5px;
-    color: green;
-    font-weight: 500;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-  }
-  .autorPonencia{
-    font-size: 12px;
-    font-weight: bold;
-  }
-
-  .timeline {
+    .timeline {
     width: 75%;
     display: flex;
     flex-direction: column;
@@ -362,6 +247,11 @@
         color: $cl-secondary-focus;
       }
     }
+  }
 
-    
+  .divBotón{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
   }
