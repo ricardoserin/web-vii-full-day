@@ -36,7 +36,7 @@ const initContactForm = (contactFormId = 'contactForm') => {
     spinner.classList.add('spinner');
     const successMessage = document.createElement('div');
     successMessage.innerHTML = '<i class="fas fa-check-circle"></i>';
-    successMessage.innerHTML += `<div class="success-message__message">Felicidades ${values.names.toUpperCase()}, se ha realizado tu pre-inscripción, pronto nos pondremos en contacto contigo</div>`;
+    successMessage.innerHTML += `<div class="success-message__message">Felicidades ${values.names.toUpperCase()}, se ha realizado tu inscripción, en breve recibirás un correo de confirmación.</div>`;
     successMessage.classList.add('success-message');
     const parent = contactForm.parentNode;
     parent.replaceChild(spinner, contactForm);
