@@ -10,7 +10,7 @@ const submitForm = async (values) => {
     "names": names.toUpperCase(),
     "email": email.toUpperCase(),
     "phone": phone,
-    "organisation": organisation,
+    "organisation": organisation?.toUpperCase() || null,
     "certificate": certificate,
     "category": category,
     "date": serverTimestamp(),
