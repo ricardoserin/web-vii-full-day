@@ -3,7 +3,7 @@ import { db } from "./firebase";
 
 const submitForm = async (values) => {
   console.log(values);
-  const { email, names, surnames, phone, certificate, organisation } = values;
+  const { email, names, surnames, phone, category, certificate, organisation } = values;
   const newParticipantRef = doc(collection(db, 'consultasRecibidas'));
   const data = {
     "surnames": surnames.toUpperCase(),
@@ -12,7 +12,9 @@ const submitForm = async (values) => {
     "phone": phone,
     "organisation": organisation,
     "certificate": certificate,
-    "date": serverTimestamp()
+    "category": category,
+    "date": serverTimestamp(),
+    "registeredBy": "WEB"
   };
   console.log('data firebase');
   console.log(data);
@@ -54,20 +56,25 @@ const initContactForm = (contactFormId = 'contactForm') => {
     existsEmailMessage.innerHTML += `<div class="success-message__message">${values.names.toUpperCase()}, lo sentimos, ya se ha realizado una inscripción con el email "${values.email}". Si cree que se trata de un error contáctenos a través de las redes sociales."</div>`;
     existsEmailMessage.classList.add('success-message');
     const parent = contactForm.parentNode;
-    parent.replaceChild(spinner, contactForm);
-    try {
-      const existsEmail = await emailValidate(values.email);
-      if(!existsEmail) {
-        await submitForm(values);
-        parent.replaceChild(successMessage, spinner);
-      } else {
-        parent.replaceChild(existsEmailMessage, spinner);
+    if(values.category === "") {
+      M.toast({html: 'Debe seleccionar una categoría de participante.' , classes: 'rounded'})
+    }
+    else {
+      parent.replaceChild(spinner, contactForm);
+      try {
+        const existsEmail = await emailValidate(values.email);
+        if(!existsEmail) {
+          await submitForm(values);
+          parent.replaceChild(successMessage, spinner);
+        } else {
+          parent.replaceChild(existsEmailMessage, spinner);
+        }
+        
+      } catch(err) {
+        alert('Error al enviar el formulario');
+        console.log({ err })
+        parent.replaceChild(contactForm, spinner);
       }
-      
-    } catch(err) {
-      alert('Error al enviar el formulario');
-      console.log({ err })
-      parent.replaceChild(contactForm, spinner);
     }
   });
 }

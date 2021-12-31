@@ -410,7 +410,7 @@
             <div class="precios-container">
                 <div class="section__column" style="border-radius: 20px 0px 0px 20px" >
                     <div class="price__section" style="background-color: white; border-radius: 20px 40px;">
-                        <div class="price__section-title" style="">Gratis</div>
+                        <div class="price__section-title" style="">Sin certificado</div>
                         <div class="price__section-content">
                             <ul class="price__list">
                                 <li class="price__list-item">
@@ -425,9 +425,13 @@
                 </div>
                 <div class="section__column" style="border-radius: 0px 20px 20px 0px" >
                     <div class="price__section" style="background-color: white; border-radius: 20px 40px;">
-                        <div class="price__section-title" style="">S/. 15</div>
+                        <div class="price__section-title" style="">Con certificado</div>
                         <div class="price__section-content">
                             <ul class="price__list">
+                                <li class="price__list-item price__list-item-category">
+                                    <span class="price__icon"><i class="fas fa-money-bill-alt"></i></span> 
+                                    <p>Estudiantes: S/. 10.00 <br />Profesionales: S/. 20.00</p> 
+                                </li>
                                 <li class="price__list-item">
                                     <span class="price__icon"><i class="fas fa-torah"></i></span> Certificado
                                 </li>
@@ -483,6 +487,15 @@
                         <label for="icon_prefix_tel">Teléfono/Celular</label>
                     </div>
                     <div class="input-field col s12">
+                        <i class="material-icons prefix">assignment_ind</i>
+                        <select id="icon_prefix_category" class="validate" name="category">
+                          <option class="select__placeholder" value="" disabled selected>Seleccione categoría de participante</option>
+                          <option value="ESTUDIANTE">Estudiante</option>
+                          <option value="PROFESIONAL">Profesional</option>
+                        </select>
+                        <label></label>
+                    </div>
+                    <div class="input-field col s12">
                         <i class="material-icons prefix">domain</i>
                         <input id="icon_prefix_org"  class="validate form__input--uppercase" type="text" name="organisation" >
                         <label for="icon_prefix_org" >Organización/Universidad (opcional)</label>
@@ -492,6 +505,7 @@
                           <input type="checkbox" class="filled-in form__checkbox" name="certificate" value="true"/>
                           <span>Quiero obtener certificado.</span>
                         </label>
+                        <a class="link-azul" href="#precios">¿Cuánto me costará?</a>
                     </p>
                     <button class="button form__button" type="submit">REGISTRAR</button>
                 </form>
@@ -588,7 +602,9 @@
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                
+                var elems = document.querySelectorAll('select');
+                var options = document.querySelectorAll('option');
+                var instances = M.FormSelect.init(elems, options);
                 const elementosCarousel = document.querySelectorAll('.carousel');
                 M.Carousel.init(elementosCarousel, {
                     duration: 300,
