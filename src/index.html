@@ -179,7 +179,31 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- fin ponente 3 -->
+                        <!-- fin ponente 3 -->
+                        <!-- ponente 4 -->
+                        <div class="swiper-slide">
+                            <div id="ponentes" class="swiper__ponente">
+                                    <div id="ponente_1" class="ponente">
+                                        <div class="image ponente__img">
+                                            <img src="./assets/img/ponentes/Foto_RoseMaryMonroy.jpg" alt="ponente">
+                                        </div>
+                                        <div class="ponente__body">
+                                            <div class="ponente__text">
+                                                <p>
+                                                    Líder en Tecnologías, con más de 20 años dirigiendo y asesorando áreas de TI en organizaciones globales, multilatinas y peruanas.
+                                                </p>
+                                            </div>
+                                            <div class="ponente__name">
+                                                <h2>Rose Mary Monroy</h2>
+                                            </div>
+                                            <div class="ponente__job">
+                                                <!-- <h2>Universidad CAECE <br/> Licenciada en Sistemas de Información </h2> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- fin ponente 4 -->
                     
                 </div>
             </div>
@@ -290,7 +314,7 @@
                 </div>
                 <div class="moment__picture-container">
                     <div class="image moment__picture">
-                        <img src="./assets/img/sorteo.jpg" alt="ponente">
+                        <img src="./assets/img/rifa.png" alt="ponente">
                     </div>
                 </div>
             </div>
@@ -309,7 +333,7 @@
                 </div>
                 <div class="moment__picture-container">
                     <div class="image moment__picture">
-                        <img src="./assets/img/break.jpg" alt="ponente">
+                        <img src="./assets/img/cafe.png" alt="ponente">
                     </div>
                 </div>
             </div>
@@ -320,8 +344,8 @@
                         15:00 p.m. 
                     </div>
                     <div class="moment__details-bottom">
-                        <p>Tema de ponencia</p>
-                        <span>Autor</span>
+                        <p>Alineamiento de TI con los objetivos de la organización</p>
+                        <span>Rose Mary Monroy</span>
                     </div>
                 </div>
                 <div class="moment__line-container">
@@ -329,7 +353,7 @@
                 </div>
                 <div class="moment__picture-container">
                     <div class="image moment__picture">
-                        <img src="./assets/img/ponentes/ponente.jpg" alt="ponente">
+                        <img src="./assets/img/ponentes/Foto_RoseMaryMonroy.jpg" alt="ponente">
                     </div>
                 </div>
             </div>
@@ -368,7 +392,7 @@
                 </div>
                 <div class="moment__picture-container">
                     <div class="image moment__picture">
-                        <img src="./assets/img/sorteo.jpg" alt="ponente">
+                        <img src="./assets/img/rifa.png" alt="ponente">
                     </div>
                 </div>
             </div>
@@ -387,7 +411,7 @@
                 </div>
                 <div class="moment__picture-container">
                     <div class="image moment__picture">
-                        <img src="./assets/img/cierre.png" alt="ponente">
+                        <img src="./assets/img/logo.png" alt="ponente">
                     </div>
                 </div>
             </div>
@@ -410,7 +434,7 @@
             <div class="precios-container">
                 <div class="section__column" style="border-radius: 20px 0px 0px 20px" >
                     <div class="price__section" style="background-color: white; border-radius: 20px 40px;">
-                        <div class="price__section-title" style="">Gratis</div>
+                        <div class="price__section-title" style="">Sin certificado</div>
                         <div class="price__section-content">
                             <ul class="price__list">
                                 <li class="price__list-item">
@@ -425,9 +449,13 @@
                 </div>
                 <div class="section__column" style="border-radius: 0px 20px 20px 0px" >
                     <div class="price__section" style="background-color: white; border-radius: 20px 40px;">
-                        <div class="price__section-title" style="">S/. 15</div>
+                        <div class="price__section-title" style="">Con certificado</div>
                         <div class="price__section-content">
                             <ul class="price__list">
+                                <li class="price__list-item price__list-item-category">
+                                    <span class="price__icon"><i class="fas fa-money-bill-alt"></i></span> 
+                                    <p>Estudiantes: S/. 10.00 <br />Profesionales: S/. 20.00</p> 
+                                </li>
                                 <li class="price__list-item">
                                     <span class="price__icon"><i class="fas fa-torah"></i></span> Certificado
                                 </li>
@@ -483,6 +511,15 @@
                         <label for="icon_prefix_tel">Teléfono/Celular</label>
                     </div>
                     <div class="input-field col s12">
+                        <i class="material-icons prefix">assignment_ind</i>
+                        <select id="icon_prefix_category" class="validate" name="category">
+                          <option class="select__placeholder" value="" disabled selected>Seleccione categoría de participante</option>
+                          <option value="ESTUDIANTE">Estudiante</option>
+                          <option value="PROFESIONAL">Profesional</option>
+                        </select>
+                        <label></label>
+                    </div>
+                    <div class="input-field col s12">
                         <i class="material-icons prefix">domain</i>
                         <input id="icon_prefix_org"  class="validate form__input--uppercase" type="text" name="organisation" >
                         <label for="icon_prefix_org" >Organización/Universidad (opcional)</label>
@@ -492,6 +529,7 @@
                           <input type="checkbox" class="filled-in form__checkbox" name="certificate" value="true"/>
                           <span>Quiero obtener certificado.</span>
                         </label>
+                        <a class="link-azul" href="#precios">¿Cuánto me costará?</a>
                     </p>
                     <button class="button form__button" type="submit">REGISTRAR</button>
                 </form>
@@ -588,7 +626,9 @@
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                
+                var elems = document.querySelectorAll('select');
+                var options = document.querySelectorAll('option');
+                var instances = M.FormSelect.init(elems, options);
                 const elementosCarousel = document.querySelectorAll('.carousel');
                 M.Carousel.init(elementosCarousel, {
                     duration: 300,
