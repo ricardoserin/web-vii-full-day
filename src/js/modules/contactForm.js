@@ -1,10 +1,12 @@
 import { collection, doc, serverTimestamp, setDoc, query, getDocs, where } from "firebase/firestore";
 import { db } from "./firebase";
 
+const collectionInscripciones = 'consultasRecibidas';
+
 const submitForm = async (values) => {
   console.log(values);
   const { email, names, surnames, phone, category, certificate, organisation } = values;
-  const newParticipantRef = doc(collection(db, 'consultasRecibidas'));
+  const newParticipantRef = doc(collection(db, collectionInscripciones));
   const data = {
     "surnames": surnames.toUpperCase(),
     "names": names.toUpperCase(),
@@ -22,7 +24,7 @@ const submitForm = async (values) => {
 }
 
 const emailValidate = async (email) => {
-  const q = query(collection(db, "consultasRecibidas"), where("email", "==", email.toUpperCase()));
+  const q = query(collection(db, collectionInscripciones), where("email", "==", email.toUpperCase()));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
     // console.log(doc.id, " => ", doc.data());
@@ -49,6 +51,9 @@ const initContactForm = (contactFormId = 'contactForm') => {
     const successMessage = document.createElement('div');
     successMessage.innerHTML = '<i class="fas fa-check-circle"></i>';
     successMessage.innerHTML += `<div class="success-message__message">Felicidades ${values.names.toUpperCase()}, se ha realizado tu inscripción, en breve recibirás un correo de confirmación.</div>`;
+    if(values.certificate === true) {
+      successMessage.innerHTML += `<div class="price__button-container price__button-margin"><a class="waves-effect waves-light price__button btn modal-trigger" href="#modal1">Conoce los métodos de pago</a></div>`
+    }
     successMessage.classList.add('success-message');
 
     const existsEmailMessage = document.createElement('div');

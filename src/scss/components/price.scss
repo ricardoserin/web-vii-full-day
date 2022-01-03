@@ -24,7 +24,7 @@
   &__section-content {
     padding: 1rem;
     padding-left: 1.5rem;
-    min-height: 15rem;
+    min-height: 18rem;
     color: black;
 
   }
@@ -42,6 +42,20 @@
       border-radius: 50%;
       text-align: center;
       display: inline-block;
+    }
+  }
+  &__button {
+    &-container{
+      display: flex;
+      justify-content: center;
+    }
+    color: #ffffff;
+    background-color: $cl-secondary;
+    &:hover {
+      background-color: $cl-secondary-focus;
+    }
+    &-margin {
+      margin: 1rem 0;
     }
   }
   &__list {

@@ -468,6 +468,10 @@
                                 <li class="price__list-item">
                                     <span class="price__icon"><i class="fas fa-gift"></i></span> Participación en sorteos
                                 </li>
+                                <div class="price__button-container">
+                                    <a class="waves-effect waves-light price__button btn modal-trigger" href="#modal1">Métodos de pago</a>
+                                </div>
+
                             </ul>
                         </div>
                     </div>
@@ -621,14 +625,38 @@
                 <span>VII Full Day Gestión de TI © 2021</span>
             </div>
         </footer>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <!-- <h4>Métodos de pago</h4> -->
+                <div class="modal__row">
+                    <div class="image modal__img">
+                        <img src="./assets/img/metodos_pago_bancos.jpg" alt="ponente">
+                    </div>
+                    <div class="image modal__img">
+                        <img src="./assets/img/metodos_pago_qr.jpg" alt="ponente">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+            </div>
+        </div>
         <!-- Materialize.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
+                var modals = document.querySelectorAll('.modal');
+                var modalsInit = M.Modal.init(modals, {});
+                // var modal1 = document.getElementById('modal1')
+                // var modalInstance = M.Modal.getInstance(modal1);
+                // modalInstance?.open();
                 var elems = document.querySelectorAll('select');
                 var options = document.querySelectorAll('option');
-                var instances = M.FormSelect.init(elems, options);
+                var instances = M.FormSelect.init(elems, {});
                 const elementosCarousel = document.querySelectorAll('.carousel');
                 M.Carousel.init(elementosCarousel, {
                     duration: 300,
