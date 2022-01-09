@@ -4,7 +4,6 @@ import { db } from "./firebase";
 const collectionInscripciones = 'consultasRecibidas';
 
 const submitForm = async (values) => {
-  console.log(values);
   const { email, names, surnames, phone, category, certificate, organisation } = values;
   const newParticipantRef = doc(collection(db, collectionInscripciones));
   const data = {
@@ -18,19 +17,13 @@ const submitForm = async (values) => {
     "date": serverTimestamp(),
     "registeredBy": "WEB"
   };
-  console.log('data firebase');
-  console.log(data);
   await setDoc(newParticipantRef, data);
 }
 
 const emailValidate = async (email) => {
   const q = query(collection(db, collectionInscripciones), where("email", "==", email.toUpperCase()));
   const querySnapshot = await getDocs(q);
-  querySnapshot.forEach((doc) => {
-    // console.log(doc.id, " => ", doc.data());
-  });
-  if(querySnapshot.size > 0) return true;
-  else return false;  
+  return querySnapshot.size > 0;
 }
 
 const initContactForm = (contactFormId = 'contactForm') => {
