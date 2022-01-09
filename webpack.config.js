@@ -23,6 +23,9 @@ const htmlEntries = Object.keys(entryNames).map((key) => {
       filename: `./${key}.html`,
       scriptLoading: 'defer',
       dependsOn: 'shared',
+      minify: {
+        removeRedundantAttributes: false, // No eliminar el type text
+      }
   })
 })
 
