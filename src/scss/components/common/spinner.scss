@@ -10,8 +10,8 @@
 .spinner {
   width: 5rem;
   height: 5rem;
-  border: 20px solid $cl-blue;
-  border-top: 20px solid $cl-skyblue;
+  border: 20px solid $cl-primary;
+  border-top: 20px solid $cl-primary-alt;
   border-radius: 50%;
   animation: spin 1s ease infinite;
 }

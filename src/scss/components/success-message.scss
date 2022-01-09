@@ -1,7 +1,8 @@
 .success-message {
-  color: $cl-green;
+  color: $cl-primary-alt;
   font-size: 5rem;
   text-align: center;
+  padding: 0 3rem;
   &__message {
     font-size: 1.2rem;
     font-weight: bold;

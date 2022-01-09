@@ -57,7 +57,7 @@
     "defaults"
   ],
   "dependencies": {
-    "firebase": "^8.6.1",
+    "firebase": "^9.4.1",
     "intersection-observer": "^0.12.0",
     "simplycountdown.js": "^1.7.0",
     "swiper": "^7.4.1"

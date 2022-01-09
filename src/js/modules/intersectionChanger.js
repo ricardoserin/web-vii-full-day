@@ -51,7 +51,7 @@ const toggleLinkClassList = (entry, activeClassName, treshold = 0.25) => {
     const aboutUsSection = document.getElementById("aboutUs");
     // const specialitesSection =document.getElementById("specialties");
     // const brancheSection =document.getElementById("branches");
-    const customerStoriesSection =document.getElementById("customerStories");
+    const customerStoriesSection =document.getElementById("ponentes");
     const contactSection =document.getElementById("contactFormSection");
   
     const observer = new IntersectionObserver((entries) => {
