@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/15f1ec3d17.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script defer="defer" src="./js/shared.31d6cfe0d16ae931b73c.js"></script><script defer="defer" src="./js/index.3b6da12117c17daa8cd9.js"></script><link href="css/shared.be221222bedac0afb120.css" rel="stylesheet"></head>
+<script defer="defer" src="./js/shared.31d6cfe0d16ae931b73c.js"></script><script defer="defer" src="./js/index.3b6da12117c17daa8cd9.js"></script><link href="css/shared.437f0d29f816d371ee82.css" rel="stylesheet"></head>
 <body id="main">
     <a target="_blank" class="flotantButton" href="https://wa.me/51950266181/?text=%c2%a1Hola!+Estoy+interesado+en+participar+del+VII+FULL+DAY+GESTI%c3%93N+DE+TI.+%0d%0aPor+favor%2c+%c2%bfMe+podr%c3%adas+brindar+informaci%c3%b3n%3f">
         <img class="image flotantButton__img" src="assets/img/whatsapp.png" alt="">
@@ -517,27 +517,27 @@
                 <form id="contactForm" class="form">
                     <div class="input-field col s12">
                       <i class="material-icons prefix">person</i>
-                      <input id="icon_prefix_surnames" class="validate form__input--uppercase" type="text" name="surnames" required>
+                      <input id="icon_prefix_surnames" class="validate form__input--uppercase" type="text" name="surnames" required disabled="disabled">
                       <label for="icon_prefix_surnames">Apellidos</label>
                     </div>
                     <div class="input-field col s12">
                       <i class="material-icons prefix">person</i>
-                      <input id="icon_prefix_names" class="validate form__input--uppercase" type="text" name="names" required>
+                      <input id="icon_prefix_names" class="validate form__input--uppercase" type="text" name="names" required disabled="disabled">
                       <label for="icon_prefix_names">Nombres</label>
                     </div>
                     <div class="input-field col s12">
                       <i class="material-icons prefix">email</i>
-                      <input id="icon_prefix_email" type="email" class="validate" name="email" required>
+                      <input id="icon_prefix_email" type="email" class="validate" name="email" required disabled="disabled">
                       <label for="icon_prefix_email">Email</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">phone</i>
-                        <input id="icon_prefix_tel" type="tel" class="validate" name="phone" required>
+                        <input id="icon_prefix_tel" type="tel" class="validate" name="phone" required disabled="disabled">
                         <label for="icon_prefix_tel">Teléfono/Celular</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">assignment_ind</i>
-                        <select id="icon_prefix_category" class="validate" name="category">
+                        <select id="icon_prefix_category" class="validate" name="category" disabled="disabled">
                           <option class="select__placeholder" value="" disabled="disabled" selected="selected">Seleccione categoría de participante</option>
                           <option value="ESTUDIANTE">Estudiante</option>
                           <option value="PROFESIONAL">Profesional</option>
@@ -546,17 +546,17 @@
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">domain</i>
-                        <input id="icon_prefix_org" class="validate form__input--uppercase" type="text" name="organisation">
+                        <input id="icon_prefix_org" class="validate form__input--uppercase" type="text" name="organisation" disabled="disabled">
                         <label for="icon_prefix_org">Organización/Universidad (opcional)</label>
                     </div>
                     <p>
                         <label>
-                          <input type="checkbox" class="filled-in form__checkbox" name="certificate" value="true">
+                          <input type="checkbox" class="filled-in form__checkbox" name="certificate" value="true" disabled="disabled">
                           <span>Quiero obtener certificado.</span>
                         </label>
                         <a class="link-azul" href="#precios">¿Cuánto me costará?</a>
                     </p>
-                    <button class="button form__button" type="submit">REGISTRAR</button>
+                    <button class="button form__button button--disabled" type="submit" disabled="disabled">LO SENTIMOS, LAS INSCRIPCIONES HAN FINALIZADO.</button>
                 </form>
 
             </div>
@@ -708,4 +708,8 @@
                         delay: 5000,
                     },
                     });
-            });</script></main></body></html>
+            });
+        </script>
+    </main>
+</body>
+</html>
