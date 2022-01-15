@@ -15,4 +15,8 @@
   &:hover {
     background-color: $cl-secondary-focus;
   }
+  &--disabled {
+    background-color: $cl-gray !important;
+    color: black;
+  }
 }
