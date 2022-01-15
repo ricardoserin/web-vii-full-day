@@ -1,7 +1,7 @@
 import { collection, doc, serverTimestamp, setDoc, query, getDocs, where } from "firebase/firestore";
 import { db } from "./firebase";
 
-const collectionInscripciones = 'consultasRecibidas';
+const collectionInscripciones = 'consultasRecibidas-test';
 
 const submitForm = async (values) => {
   const { email, names, surnames, phone, category, certificate, organisation } = values;
@@ -43,7 +43,7 @@ const initContactForm = (contactFormId = 'contactForm') => {
     spinner.classList.add('spinner');
     const successMessage = document.createElement('div');
     successMessage.innerHTML = '<i class="fas fa-check-circle"></i>';
-    successMessage.innerHTML += `<div class="success-message__message">Felicidades ${values.names.toUpperCase()}, se ha realizado tu inscripción, en breve recibirás un correo de confirmación.</div>`;
+    successMessage.innerHTML += `<div class="success-message__message">Felicidades ${values.names.toUpperCase()}, se ha realizado tu inscripción, en breve recibirás un correo con el enlace para acceder al evento. <br/> ¡Te esperamos!</div>`;
     if(values.certificate === true) {
       successMessage.innerHTML += `<div class="price__button-container price__button-margin"><a class="waves-effect waves-light price__button btn modal-trigger" href="#modal1">Conoce los métodos de pago</a></div>`
     }
