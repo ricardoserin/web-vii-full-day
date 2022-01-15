@@ -1,7 +1,7 @@
 import { collection, doc, serverTimestamp, setDoc, query, getDocs, where } from "firebase/firestore";
 import { db } from "./firebase";
 
-const collectionInscripciones = 'consultasRecibidas-test';
+const collectionInscripciones = 'consultasRecibidas';
 
 const submitForm = async (values) => {
   const { email, names, surnames, phone, category, certificate, organisation } = values;
