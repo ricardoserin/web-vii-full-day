@@ -55,8 +55,21 @@ simplyCountdown('#cuenta', {
         // your code
         document.getElementById("elimina1").remove();
         document.getElementById("elimina2").remove();
+        document.getElementById("btn_1").remove();
+        document.getElementById("btn_2").remove();
+        let btnRegistrar = document.getElementById("btn_3");
+        btnRegistrar.setAttribute('disabled', 'disabled');
+        btnRegistrar.className += " button--disabled";
+        btnRegistrar.innerHTML="Las inscripciones han finalizado."
+        document.getElementById("icon_prefix_surnames").setAttribute('disabled', 'disabled');
+        document.getElementById("icon_prefix_names").setAttribute('disabled', 'disabled');
+        document.getElementById("icon_prefix_email").setAttribute('disabled', 'disabled');
+        document.getElementById("icon_prefix_tel").setAttribute('disabled', 'disabled');
+        document.getElementById("icon_prefix_category").setAttribute('disabled', 'disabled');
+        document.getElementById("icon_prefix_org").setAttribute('disabled', 'disabled');
+        
         const div = document.getElementById('cuenta');
-        div.innerHTML = '<strong> <h1  class="presentation__message">El evento ya inició</h1></strong>'; // Interpreta el HTML
+        div.innerHTML = '<strong> <h1  class="presentation__message">¡El VII FULL DAY DE GESTIÓN DE TI ha dado inicio!</h1></strong>'; // Interpreta el HTML
         div.innerHTML;
         div.textContent;
         return;

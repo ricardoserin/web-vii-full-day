@@ -30,6 +30,7 @@ const initContactForm = (contactFormId = 'contactForm') => {
   const contactForm = document.getElementById(contactFormId);
   contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
+    const now = new Date();
     const values = [ ...event.target ].reduce((prev, curr) => {
       if (curr.name === "certificate") {
         return { ...prev, [curr.name]: curr.checked };
@@ -53,6 +54,12 @@ const initContactForm = (contactFormId = 'contactForm') => {
     existsEmailMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i>';
     existsEmailMessage.innerHTML += `<div class="success-message__message">${values.names.toUpperCase()}, lo sentimos, ya se ha realizado una inscripción con el email "${values.email}". Si cree que se trata de un error contáctenos a través de las redes sociales."</div>`;
     existsEmailMessage.classList.add('success-message');
+
+    const pillinMessage = document.createElement('div');
+    pillinMessage.innerHTML = '<i class="fas fa-eye"></i>';
+    pillinMessage.innerHTML += `<div class="success-message__message">${values.names.toUpperCase()}, pillín, lograste habilitar el formulario, si llegas a registrarte te invito una gaseosa ;).</div>`;
+    pillinMessage.classList.add('success-message');
+
     const parent = contactForm.parentNode;
     if(values.category === "") {
       M.toast({html: 'Debe seleccionar una categoría de participante.' , classes: 'rounded'})
@@ -61,15 +68,21 @@ const initContactForm = (contactFormId = 'contactForm') => {
       parent.replaceChild(spinner, contactForm);
       try {
         const existsEmail = await emailValidate(values.email);
-        if(!existsEmail) {
-          await submitForm(values);
-          parent.replaceChild(successMessage, spinner);
+        console.log(now.getHours());
+        console.log(now.getMinutes());
+        if(now.getHours() >= 9 && now.getMinutes() >= 0) {
+          parent.replaceChild(pillinMessage, spinner);
         } else {
-          parent.replaceChild(existsEmailMessage, spinner);
+          if(!existsEmail) {
+            await submitForm(values);
+            parent.replaceChild(successMessage, spinner);
+          } else {
+            parent.replaceChild(existsEmailMessage, spinner);
+          }
         }
         
       } catch(err) {
-        alert('Error al enviar el formulario');
+        alert('Error en el formulario.');
         console.log({ err })
         parent.replaceChild(contactForm, spinner);
       }
