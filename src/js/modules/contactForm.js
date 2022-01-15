@@ -74,10 +74,12 @@ const initContactForm = (contactFormId = 'contactForm') => {
           parent.replaceChild(pillinMessage, spinner);
         } else {
           if(!existsEmail) {
-            await submitForm(values);
-            parent.replaceChild(successMessage, spinner);
+            // await submitForm(values);
+            // parent.replaceChild(successMessage, spinner);
+            parent.replaceChild(pillinMessage, spinner);
           } else {
-            parent.replaceChild(existsEmailMessage, spinner);
+            parent.replaceChild(pillinMessage, spinner);
+            // parent.replaceChild(existsEmailMessage, spinner);
           }
         }
         
