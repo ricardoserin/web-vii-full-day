@@ -517,30 +517,30 @@
                 <div class="contact-form__title">
                     <p>Para inscribirte, por favor, llena el siguiente formulario:</p>
                 </div>
-                <form id="contactForm" class="form ">
+                <form id="contactForm" class="form " >
                     <div class="input-field col s12">
                       <i class="material-icons prefix">person</i>
-                      <input id="icon_prefix_surnames"  class="validate form__input--uppercase" type="text" name="surnames" required>
+                      <input id="icon_prefix_surnames"  class="validate form__input--uppercase" type="text" name="surnames" required disabled>
                       <label for="icon_prefix_surnames">Apellidos</label>
                     </div>
                     <div class="input-field col s12">
                       <i class="material-icons prefix">person</i>
-                      <input id="icon_prefix_names"  class="validate form__input--uppercase" type="text" name="names" required>
+                      <input id="icon_prefix_names"  class="validate form__input--uppercase" type="text" name="names" required disabled>
                       <label for="icon_prefix_names">Nombres</label>
                     </div>
                     <div class="input-field col s12">
                       <i class="material-icons prefix">email</i>
-                      <input id="icon_prefix_email" type="email" class="validate" name="email" required>
+                      <input id="icon_prefix_email" type="email" class="validate" name="email" required disabled>
                       <label for="icon_prefix_email">Email</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">phone</i>
-                        <input id="icon_prefix_tel" type="tel" class="validate" name="phone" required>
+                        <input id="icon_prefix_tel" type="tel" class="validate" name="phone" required disabled>
                         <label for="icon_prefix_tel">Teléfono/Celular</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">assignment_ind</i>
-                        <select id="icon_prefix_category" class="validate" name="category">
+                        <select id="icon_prefix_category" class="validate" name="category" disabled>
                           <option class="select__placeholder" value="" disabled selected>Seleccione categoría de participante</option>
                           <option value="ESTUDIANTE">Estudiante</option>
                           <option value="PROFESIONAL">Profesional</option>
@@ -549,17 +549,17 @@
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">domain</i>
-                        <input id="icon_prefix_org"  class="validate form__input--uppercase" type="text" name="organisation" >
+                        <input id="icon_prefix_org"  class="validate form__input--uppercase" type="text" name="organisation" disabled>
                         <label for="icon_prefix_org" >Organización/Universidad (opcional)</label>
                     </div>
                     <p>
                         <label>
-                          <input type="checkbox" class="filled-in form__checkbox" name="certificate" value="true"/>
+                          <input type="checkbox" class="filled-in form__checkbox" name="certificate" value="true" disabled/>
                           <span>Quiero obtener certificado.</span>
                         </label>
                         <a class="link-azul" href="#precios">¿Cuánto me costará?</a>
                     </p>
-                    <button class="button form__button" type="submit">REGISTRAR</button>
+                    <button class="button form__button button--disabled" type="submit" disabled>LO SENTIMOS, LAS INSCRIPCIONES HAN FINALIZADO.</button>
                 </form>
 
             </div>
